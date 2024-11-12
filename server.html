@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Servidor DDTank2</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="bookmark" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/ddt-reset.css">
+    <link rel="stylesheet" href="css/ddt-style.css">
+    <link rel="stylesheet" href="css/ddt-server.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="js/clearbox/css/cb_style.css">
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="js/webtoolkit.md5.js"></script>
+    <script type="text/javascript" src="js/jquery.corner.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.21.custom.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.button.js"></script>
+</head>
+
+<body>
+    <script src="js/promo-top-bar.js"></script>
+    <div class="wrap-box activity-bg">
+        <div class="w980 clearfix">
+            <div class="hearder p-r">
+                <div class="slogan p-a">
+                    <a href="index.html">
+                        <img class="ie6png" src="images/logo/new-ddt.png" alt="" title="">
+                    </a>
+                </div>
+            </div>
+            <div class="blank"></div>
+            <div class="index-left f-l">
+                <div class="login p-r clearfix">
+                    <div class="unlogin-box clearfix">
+                        <div class="input-box f-l p-r">
+                            <input type="text" name="" id="user">
+                            <input type="password" name="" id="userPass">
+                            <div class="blank"></div>
+                            <label for="user" class="user-lab">Login</label>
+                            <label for="userPass" class="pass-lab">Senha</label>
+                        </div>
+                        <span class="loginbtn f-l" onclick="return checklogin();"></span>
+                        <div class="forget f-l">
+                            <a href="#user-reg">Criar conta?</a> | <a href="#forgot-pass">Esqueceu a senha?</a>
+                        </div>
+                    </div>
+                    <!--#1 -->
+                    <a href="#x" class="overlay" id="user-reg"></a>
+                    <div class="popup"><a class="close" href="#close"></a>
+                        <center>
+                            <h2>Criar conta!</h2>
+                            <p>Divirta-se :)</p>
+                        </center>
+                        <p>
+                            <label for="usernamesignup" class="uname">Login</label>
+                            <input id="usernamesignup" name="usernamesignup" type="text" placeholder="Digite o login" />
+                        </p>
+                        <p>
+                            <label for="emailsignup" class="youmail">E-mail</label>
+                            <input id="emailsignup" name="emailsignup" type="text" placeholder="Digite o e-mail" />
+                        </p>
+                        <p>
+                            <label for="passwordsignup" class="youpasswd">Senha</label>
+                            <input id="passwordsignup" name="passwordsignup" type="password" placeholder="Digite a senha" />
+                        </p>
+                        <p>
+                            <label for="passwordsignup_confirm" class="youpasswd">Repita a senha</label>
+                            <input id="passwordsignup_confirm" name="passwordsignup_confirm" type="password" placeholder="Repita a senha!" />
+                        </p>
+                        <center>
+                            <a class="large orangellow button" onclick="return checkForm();">Pronto</a>
+                        </center>
+                    </div>
+                    <!--#2 -->
+                    <a href="#x" class="overlay" id="forgot-pass"></a>
+                    <div class="popup"><a class="close" href="#close"></a>
+                        <center>
+                            <h2>Recuperar senha!</h2>
+                            <p>Funcionalidade temporariamente indisponível</p>
+                        </center>
+                        <p>
+                            <label for="" class="">Nick</label>
+                            <input id="" name="" type="text" placeholder="Digite o login" />
+                        </p>
+                        <p>
+                            <label for="" class="">Login</label>
+                            <input id="" name="" type="text" placeholder="Digite o login" />
+                        </p>
+                        <p>
+                            <label for="" class="">E-mail</label>
+                            <input id="" name="" type="text" placeholder="Digite o e-mail" />
+                        </p>
+                        <center>
+                            <a class="large orangellow button">Recuperar</a>
+                        </center>
+                    </div>
+                    <!--#3 -->
+                    <div class="login-box hidden">
+                        <div class="clearfix">
+                            <a href="http://play.wan.com/user/index" class="userImg f-l" target="_blank"></a>
+                            <div class="f-l">
+                                <div class="userVal ellipsis"></div>
+                                <div class="currencyNum"></div>
+                            </div>
+                            <a href="#nogo" class="loginOut f-l">[Sair]</a>
+                        </div>
+                        <h2>O servidor que você acessou por último foi:</h2>
+                        <a href="" class="lastLogin">Carregando...</a>
+                    </div>
+                </div>
+                <div class="down-btn mt20 ">
+                    <a href="#" target="_blank" class="down-btn">Baixar o launcher</a>
+                    <a href="http://ddt.wan.com/newcard.shtml" target="_blank" class="gift-btn">Pacote de boas-vindas</a>
+                    <a href="http://play.wan.com/pay/index?game=ddt" target="_blank" class="pay-btn">Recarga rápida</a>
+                </div>
+                <div class="server-news mt10 clearfix">
+                    <h2 class="h2-tit">Grupo VK</h2>
+                    <ul class="clearfix">
+                        vk
+                    </ul>
+                </div>
+                <div class="ddt-link mt10 clearfix">
+                    <a class="pt10" href="#">1</a>
+                    <a class="tel" href="#">1</a>
+                    <a class="tel" href="#">1</a>
+                    <div class="link-down p-r">
+                        <span>Lista de mídia parceira do DDTank</span>
+                        <ul class="p-a clearfix">
+                            <li><a href="http://www.wan.com/" target="_blank">Plataforma Chuangyou WAN</a></li>
+                            <li><a href="http://jy.wan.com" target="_blank">Jianying</a></li>
+                            <li><a href="http://xddt.wan.com" target="_blank">Novo DDTank</a></li>
+                            <li><a href="http://sq.wan.com" target="_blank">Shenqu</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="index-rgt f-r">
+                <div class="pageTit f-l">
+                    <h2 class="pageH2 f-l server-h2">Lista de Servidores</h2>
+                    <div class="bread f-r">
+                        Você está em: <a href="index.html">Início</a> > Status do Servidor
+                    </div>
+                </div>
+                <div class="blank"></div>
+                <div class="pageBox">
+                    <div class="clearfix">
+                        <div class="recommend-ser f-l">
+                            <h2 class="serverList-h2 recommend-h2">Status do servidor</h2>
+                            <div class="sub-recommend-ser">
+                                <div class="recommend-box">
+                                    <iframe width='250' height='200' frameborder='0' scrolling="no" src='info/online.php'></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="serverList-h2">Hall da Fama</h2>
+                    <div class="serverList clearfix">
+                        <div class="server-plat f-r">
+                            <section class="tabs">
+                                <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked">
+                                <label for="tab-1" class="tab-label-1">Experiência</label>
+
+                                <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2">
+                                <label for="tab-2" class="tab-label-2">Força</label>
+
+                                <input id="tab-3" type="radio" name="radio-set" class="tab-selector-3">
+                                <label for="tab-3" class="tab-label-3">Guilda</label>
+
+                                <input id="tab-4" type="radio" name="radio-set" class="tab-selector-4">
+                                <label for="tab-4" class="tab-label-4">Chat</label>
+
+                                <input id="tab-5" type="radio" name="radio-set" class="tab-selector-5">
+                                <label for="tab-5" class="tab-label-5">Chat Admin</label>
+
+                                <div class="clear-shadow"></div>
+
+                                <div class="content">
+                                    <div class="content-1">
+                                        <table width="600" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="50" align="left">
+                                                        <h3>Nº</h3>
+                                                    </td>
+                                                    <td width="200" align="left">
+                                                        <h3>Nick</h3>
+                                                    </td>
+                                                    <td width="150" align="left">
+                                                        <h3>Nível</h3>
+                                                    </td>
+                                                    <td width="200" align="left">
+                                                        <h3>Experiência</h3>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table width="600" border="0">
+                                            <iframe width='608' height='408' frameborder='0' scrolling="no" src='info/xp.php'></iframe>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="content-2">
+                                        <table width="600" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="50" align="left">
+                                                        <h3>Nº</h3>
+                                                    </td>
+                                                    <td width="200" align="left">
+                                                        <h3>Nick</h3>
+                                                    </td>
+                                                    <td width="150" align="left">
+                                                        <h3>Nível</h3>
+                                                    </td>
+                                                    <td width="200" align="left">
+                                                        <h3>Força</h3>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table width="600" border="0">
+                                            <iframe width='608' height='408' frameborder='0' scrolling="no" src='info/fc.php'></iframe>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="content-3">
+                                        <table width="600" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="50" align="left">
+                                                        <h3>Nº</h3>
+                                                    </td>
+                                                    <td width="200" align="left">
+                                                        <h3>Nome</h3>
+                                                    </td>
+                                                    <td width="150" align="left">
+                                                        <h3>Nível</h3>
+                                                    </td>
+                                                    <td width="200" align="left">
+                                                        <h3>Força</h3>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table width="600" border="0">
+                                            <iframe width='608' height='408' frameborder='0' scrolling="no" src='info/guild.php'></iframe>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="content-4">
+                                        <iframe width='560' height='600' frameborder='0' scrolling="no" src='chat/index.html'></iframe>
+                                    </div>
+                                    <div class="content-5">
+                                        <iframe width='560' height='600' frameborder='0' scrolling="no" src='chat/index.html'></iframe>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="DynamicContent">
+        <div id="loading">Conectando ao servidor!<img alt="" src="images/loading.gif" /></div>
+    </div>
+    <div id="ErrorContent">
+        <div id="content"></div>
+    </div>
+    <div id="codeContent">
+        <table style="width:100%;">
+            <tr>
+                <td class="auto-style1">
+                    <img id="ImageCode" src="auth/validatecode.ashx" height="32" width="127" alt="" />
+                </td>
+                <td style="text-align: center">
+                    <input type="text" style="font-size: 14px;width: 120px" name="code" placeholder="Digite o código de segurança" id="code" />
+                </td>
+                <td>
+                    <a id="ReLoad" title="" href="javascript:href()" style="font-size: 12px; color: blue">Atualizar</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;">
+                    <a class="small green button" type="" id="checkCode" onclick="return checkCode();">Registrar!</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="TB_overlayBG"></div>
+    <div class="footer-img"></div>
+    <link rel="stylesheet" href="js/footer/css/footer.css" />
+    <script src="js/footer/js/footer.js"></script>
+    <script src="js/ddt2/ddt-index.js"></script>
+    <script src="js/ddt2/ddt2-index.js"></script>
+    <script src='js/clearbox/js/clearbox.js'></script>
+    <div id="Div1">
+</body>
+
+</html>

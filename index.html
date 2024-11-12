@@ -1,0 +1,949 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title><?php echo $title; ?></title>
+	<meta name="Description" content="《DDTank2》" />
+	<meta name="Keywords" content="DDTank2" />
+	<meta name="author" content="TecnoJogos" />
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<link rel="bookmark" href="images/favicon.ico" />
+
+	<!-- css -->
+	<link rel="stylesheet" href="css/ddt-index.css">
+	<link rel="stylesheet" href="css/ddt-reset.css">
+	<link rel="stylesheet" href="css/ddt-style.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="js/clearbox/css/cb_style.css">
+
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+	<script type="text/javascript" src="js/webtoolkit.md5.js"></script>
+	<script type="text/javascript" src="js/jquery.corner.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.button.js"></script>
+	<script type="text/javascript" src="js/password_ddt.js"></script>
+</head>
+
+<body>
+	<div class="wrap-box index-bg">
+		<div class="w980 clearfix">
+			
+			<div class="hearder p-r">
+				<div class="slogan p-a">
+					<a href="index.html" target="_blank">
+						<img class="ie6png" src="images/logo/new-ddt.png" alt="" title="" style="top: 100px">
+					</a>
+				</div>
+			</div>
+		
+			<div class="w980 clearfix">
+				<div class="index-left f-l">
+					<div class="login p-r clearfix">
+						<div class="unlogin-box clearfix">
+							<div class="input-box f-l p-r">
+								<input type="text" name="login" id="user">
+								<input type="password" name="senha" id="userPass">
+								<div class="blank"></div>
+								<label for="user" class="user-lab">Login</label>
+								<label for="userPass" class="pass-lab">Senha</label>
+							</div>
+							 <!--onclick="return checklogin();"-->
+								<a class="loginbtn f-l" href="#user-server"></a>
+							
+							<div class="forget f-1">
+								<a href="#user-reg">Crie Conta</a> | <a href="#forgot-pass">Esqueceu sua senha?</a>
+							</div>
+						</div>
+						<!--#1 -->
+						<form method="post">
+							<a href="#x" class="overlay" id="user-reg"></a>
+							<div class="popup"><a class="close" href="#close"></a>
+								<div style="text-align: center;">
+									<h2>Crie a sua conta aqui!</h2>
+									<p>Tenha um bom jogo :)</p>
+								</div>
+								<p>
+									<label for="usernamesignup" class="uname">Login</label>
+									<input id="usernamesignup" name="usernamesignup" type="text" placeholder="Digite o login" />
+								</p>
+								<p>
+									<label for="emailsignup" class="youmail"> Email</label>
+									<input id="emailsignup" name="emailsignup" type="text" placeholder="Digite o email" />
+								</p>
+								<p>
+									<label for="passwordsignup" class="youpasswd">Senha</label>
+									<input id="passwordsignup" name="passwordsignup" type="password" placeholder="Digite a senha" />
+								</p>
+								<p>
+									<label for="passwordsignup_confirm" class="youpasswd">Confirmar Senha</label>
+									<input id="passwordsignup_confirm" name="passwordsignup_confirm" type="password" placeholder="Repita a senha!" />
+								</p>
+								<div class="clearfix" style="text-align: center;">
+									<a class="large orangellow button" onclick="return checkForm();">Criar Conta</a>
+								</div>
+							</div>
+						</form>
+						<!--#2 -->
+						<form method="post">
+							<a href="#x" class="overlay" id="forgot-pass"></a>
+							<div class="popup"><a class="close" href="#close"></a>
+								<div style="text-align: center;">
+									<h2>Restaurar senha!</h2>
+									<p>Temporariamente sem funcionar</p>
+								</div>
+								<p>
+									<label for="" class="">Login</label>
+									<input id="" name="" type="text" placeholder="Ведите логин" />
+								</p>
+								<p>
+									<label for="" class="">Email</label>
+									<input id="" name="" type="email" placeholder="Ведите логин" />
+								</p>
+								<p>
+									<label for="" class="">Майл</label>
+									<input id="" name="" type="text" placeholder="Ведите майл" />
+								</p>
+								<div class="clearfix" style="text-align: center;">
+									<a class="large orangellow button">Recuperar Senha</a>
+								</div>
+							</div>
+						</form>
+						<!--#3 -->
+						<div class="login-box hidden">
+							<div class="clearfix">
+								<a href="http://play.wan.com/user/index" class="userImg f-l" target="_blank"></a>
+								<div class="f-l">
+									<div class="userVal ellipsis"></div>
+									<div class="currencyNum"></div>
+								</div>
+								<a href="#nogo" class="loginOut f-l">[Sair]</a>
+							</div>
+							<h2>O servidor no qual você fez login pela última vez foi: </h2>
+							<a href="" class="lastLogin">Carregando ..2.</a>
+						</div>
+					</div>
+					<div class="down-btn mt20 ">
+						<a href="#" target="_blank" class="down-btn">Baixar Logger</a>
+						<a href="#" target="_blank" class="gift-btn">Pacote de presente para novatos</a>
+						<a href="#" target="_blank" class="pay-btn">Recarga rápida</a>
+					</div>
+					<div class="recom-ser mt10 clearfix">
+						<h2 class="h2-tit">Servidor recomendado</h2>
+						<div class="recom-box">
+							<div class="fast-selectSer p-r clearfix">
+								<input type="text" class="fast-input f-l" placeholder="Seleção rápida de servidor">
+								<span class="fast-enter f-l">Entre no jogo</span>
+								<em class="blank"></em>
+								<em class="selectBg p-a"></em>
+							</div>
+							<ul class="clearfix">
+								<li>Carregando...</li>
+							</ul>
+							<a href="server/index.html" class="more-server"
+								target="_blank">Ver mais servidores >></a>
+						</div>
+					</div>
+					<div class="ranking mt10 clearfix">
+						<h2 class="h2-tit">Hall da Fama</h2>
+						<div class="rank-box">
+							<div class="clearfix">
+								<div class="imitation-select p-r imit-server">
+									<span class="down-arrows f-r"></span>
+									<div class="default-val p-a def1">
+										<div class="first-val">carregando...</div>
+									</div>
+									<ul class="filtrate-ul f-first-ul p-a" style="display: ;">
+					
+									</ul>
+								</div>
+								<div class="imitation-select p-r lv-server">
+									<span class="down-arrows f-r"></span>
+									<div class="default-val p-a def2">
+										<div class="second-val" typeid="1">Classificação de poder de combate pessoal</div>
+									</div>
+									<ul class="filtrate-ul f-second-ul p-a" style="display: ;">
+										<li typeid="1">Classificação de poder de combate pessoal</li>
+										<li typeid="3">Classificação do poder de combate da guilda</li>
+										<li typeid="2">Classificação de nível de guilda</li>
+									</ul>
+								</div>
+							</div>
+							<div class="rank-menu clearfix">
+								<span class="a">№</span>
+								<span class="b">Nick</span>
+								<span class="c">FC</span>
+							</div>
+							<ul class="rank-list clearfix">
+								<iframe width='250' height='408' frameborder='0' scrolling="no"
+									src='info/fc.php'></iframe>
+							</ul>
+						</div>
+					</div>
+					<ul class="weibo clearfix mt10">
+						<li>
+							<img src="images/ava/ava-admin-01.jpg" alt="" class="f-l">
+							<div class="weibo-rgt f-r">
+								<h2>Administrador</h2>
+								<h3>Ник-Zheka</h3>
+								<div class="weibo-btn clearfix">
+									<a href="http://e.t.qq.com/dandantang" class="w-qq" target="_blank"></a>
+								</div>
+							</div>
+						</li>
+						<li class="last">
+							<img src="images/ava/ava-admin-02.jpg" alt="" class="f-l">
+							<div class="weibo-rgt f-r">
+								<h2>Administrador</h2>
+								<h3>Ник-Zum</h3>
+								<div class="weibo-btn clearfix">
+									<a href="http://e.weibo.com/dandantang" class="w-sina" target="_blank"></a>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="ddt-link mt10 clearfix">
+						<a class="pt10">Skype-61886777</a>
+						<a class="tel">ВКонтакте</a>
+						<a class="tel">exptank@gmail.com</a>
+						<div class="link-down p-r">
+							<span>Rede social</span>
+							<ul class="p-a clearfix">
+								<li><a href="" target="_blank">Facebook</a></li>
+								<li><a href="" target="_blank">YouTube</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="index-rgt f-r">
+					<div class="focus clearfix">
+						<div class="focus-img f-l">
+
+							<a target="_blank" title="" href="http://ddt.wan.com/news/detail/1_1263.html">
+								<img alt="新服43区10月31日10点开启" width="503" height="200" src="images/slider/10000.jpg" />
+							</a>
+							<a target="_blank" title="" href="http://ddt.wan.com/activity/2014SinglesDay/index.html">
+								<img alt="光棍节精彩活动" width="503" height="200" src="images/slider/20000.jpg" />
+							</a>
+							<a target="_blank" title="" href="http://ddt.wan.com/news/detail/3_1265.html">
+								<img alt="“弹弹花香”活动开启" width="503" height="200" src="images/slider/30000.jpg" />
+							</a>
+							<a target="_blank" title="" href="http://ddt.wan.com/news/detail/1_1279.html">
+								<img alt="11.20-24日充值活动" width="503" height="200" src="images/slider/40000.jpg" />
+							</a>
+						</div>
+						<div class="focus-menu f-r">
+							<span class="select">A nova área de servidor 43 será aberta às 10h do dia 31 de outubro</span>
+							<span>Atividades emocionantes para o dia dos solteiros</span>
+							<span>Começa a atividade "Bounce a fragrância das flores"</span>
+							<span>Atividade de recarga nos dias 20 a 24/11</span>
+
+						</div>
+					</div>
+					<div class="news mt20 clearfix">
+						<div class="news-box f-l">
+							<div class="news-tab clearfix">
+								<span class="select"><cite></cite>Notícias</span>
+								<span><cite></cite>Servidor</span>
+								<span><cite></cite>Anúncios</span>
+								<span><cite></cite>Eventos</span>
+								<a class="news-more f-r" href="newsList.html" target="_blank">Mais</a>
+							</div>
+							<div class="clearfix">
+								<div class="news-content">
+									<ul class="news-ul clearfix">
+										<li class="first">
+											<h2 class="clearfix">
+												<a target="_blank" title=""
+													href="http://ddt.wan.com/news/detail/1_1283.html">
+													《DDTANK3》Bem-vindo, jogadores
+												</a>
+											</h2>
+											<p class="clearfix">
+												Nome do evento: Grande evento de recarga emocionante. Conteúdo do evento: Durante o evento, os jogadores que acumularem uma certa quantia em recargas poderão ganhar um prêmio. Período do evento: 23 de novembro — 24 de novembro. Detalhes...
+												<a target="_blank" class="show fn-right" title=""
+													href="http://ddt.wan.com/news/detail/1_1283.html">Ver detalhes>></a>
+											</p>
+										</li>
+										<li>
+											<span>1</span>
+											<a href="http://ddt.wan.com/news/detail/1_1282.html" title="Texto01"
+												target="_blank">Texto01</a>
+											<em>[00-00]</em>
+										</li>
+										<li>
+											<span>2</span>
+											<a href="http://ddt.wan.com/news/detail/1_1281.html" title="Texto02"
+												target="_blank">Texto02</a>
+											<em>[00-00]</em>
+										</li>
+										<li>
+											<span>3</span>
+											<a href="http://ddt.wan.com/news/detail/1_1280.html" title="Texto03"
+												target="_blank">Texto03</a>
+											<em>[00-00]</em>
+										</li>
+										<li class="last">
+											<span>4</span>
+											<a href="http://ddt.wan.com/news/detail/1_1279.html" title="Texto04"
+												target="_blank">Texto04</a>
+											<em>[00-00]</em>
+										</li>
+									</ul>
+								</div>
+								<div class="news-content hidden">
+									<ul class="news-ul clearfix">
+										<li class="first">
+											<h2 class="clearfix">
+												<a target="_blank" title=""
+													href="http://ddt.wan.com/news/detail/1_1235.html">
+													wan《弹弹堂3》juntamente com 07073, grande distribuição de pacotes de privilégio
+												</a>
+											</h2>
+											<p class="clearfix">
+												Esperamos ansiosamente pelas férias de ouro do feriado de 11 de outubro! Não quer viajar? Não quer ver multidões? Sem problemas! Fique em casa jogando e seja um bonito tranquilo! Para ajudar todos a...
+												<a target="_blank" class="show fn-right" title=""
+													href="http://ddt.wan.com/news/detail/1_1235.html">Ver detalhes>></a>
+											</p>
+										</li>
+										<li>
+											<span>Notícia</span>
+											<a href="http://ddt.wan.com/news/detail/1_1234.html"
+												title="wan《弹弹堂3》juntamente com um site exclusivo para distribuição de pacotes" target="_blank">wan《弹弹堂3》juntamente com um site exclusivo para distribuição de pacotes</a>
+											<em>[09-16]</em>
+										</li>
+										<li>
+											<span>Notícia</span>
+											<a href="http://ddt.wan.com/news/detail/1_1233.html"
+												title="wan《弹弹堂3》juntamente com um site de jogos, distribuição exclusiva de pacotes" target="_blank">wan《弹弹堂3》juntamente com um site de jogos, distribuição exclusiva de pacotes</a>
+											<em>[09-16]</em>
+										</li>
+										<li>
+											<span>Notícia</span>
+											<a href="http://ddt.wan.com/news/detail/1_1232.html"
+												title="《弹弹堂3》novo pacote de mídia lançado (parte 1)" target="_blank">《弹弹堂3》novo pacote de mídia lançado (parte 1)</a>
+											<em>[09-16]</em>
+										</li>
+										<li class="last">
+											<span>Notícia</span>
+											<a href="http://ddt.wan.com/news/detail/1_1231.html"
+												title="《弹弹堂3》pacote de mídia da versão 6.5 lançado (parte 2)" target="_blank">《弹弹堂3》pacote de mídia da versão 6.5 lançado (parte 2)</a>
+											<em>[09-16]</em>
+										</li>
+									</ul>
+								</div>
+								<div class="news-content hidden">
+									<ul class="news-ul clearfix">
+										<li class="first">
+											<h2 class="clearfix">
+												<a target="_blank" title=""
+													href="http://ddt.wan.com/news/detail/2_1150.html">
+													《弹弹堂3》Aviso de manutenção programada em 22 de julho
+												</a>
+											</h2>
+											<p class="clearfix">
+												Caros amigos jogadores: Para proporcionar uma melhor experiência de jogo, 《弹弹堂3》passará por manutenção programada no dia 22 de julho (terça-feira) das 05:00 às 08:30. O tempo de conclusão exato dependerá da manutenção...
+												<a target="_blank" class="show fn-right" title=""
+													href="http://ddt.wan.com/news/detail/2_1150.html">Ver detalhes>></a>
+											</p>
+										</li>
+										<li>
+											<span>Aviso</span>
+											<a href="http://ddt.wan.com/news/detail/2_971.html"
+												title="《弹弹堂2》aviso de manutenção temporária em 11 de fevereiro para as regiões 8-12"
+												target="_blank">《弹弹堂2》aviso de manutenção temporária em 11 de fevereiro para as regiões 8-12</a>
+											<em>[02-10]</em>
+										</li>
+										<li>
+											<span>Aviso</span>
+											<a href="http://ddt.wan.com/news/detail/2_953.html"
+												title="《弹弹堂2》aviso de manutenção temporária em 23 de janeiro" target="_blank">《弹弹堂2》aviso de manutenção temporária em 23 de janeiro</a>
+											<em>[01-23]</em>
+										</li>
+										<li>
+											<span>Aviso</span>
+											<a href="http://ddt.wan.com/news/detail/2_919.html" title="《弹弹堂2》aviso de manutenção temporária em 4 de janeiro"
+												target="_blank">《弹弹堂2》aviso de manutenção temporária em 4 de janeiro</a>
+											<em>[01-05]</em>
+										</li>
+										<li class="last">
+											<span>Aviso</span>
+											<a href="http://ddt.wan.com/news/detail/2_914.html" title="《弹弹堂2》aviso de manutenção temporária em 1 de janeiro"
+												target="_blank">《弹弹堂2》aviso de manutenção temporária em 1 de janeiro</a>
+											<em>[01-05]</em>
+										</li>
+									</ul>
+								</div>
+								<div class="news-content hidden">
+									<ul class="news-ul clearfix">
+										<li class="first">
+											<h2 class="clearfix">
+												<a target="_blank" title=""
+													href="http://ddt.wan.com/news/detail/3_1270.html">
+													《弹弹堂3》Presentes de atualização de montaria de 8 a 10 de novembro
+												</a>
+											</h2>
+											<p class="clearfix">
+												Nome do evento: Você atualiza, nós presenteamos. Conteúdo do evento: Montarias legais e divertidas, todos os dias te levando para passear, mudando de visual sem parar, todos juntos para se atualizar. Período do evento: 8 a 10 de novembro. Regras do evento: Durante o período do evento, os jogadores que atualizarem suas montarias para o nível especificado poderão ganhar prêmios correspondentes. Prêmios do evento:...
+												<a target="_blank" class="show fn-right" title=""
+													href="http://ddt.wan.com/news/detail/3_1270.html">Ver detalhes>></a>
+											</p>
+										</li>
+										<li>
+											<span>Evento</span>
+											<a href="http://ddt.wan.com/news/detail/3_1265.html"
+												title="《弹弹堂3》Evento ‘Flores e Sons de Novembro’ iniciado" target="_blank">《弹弹堂3》Evento ‘Flores e Sons de Novembro’ iniciado</a>
+											<em>[10-30]</em>
+										</li>
+										<li>
+											<span>Evento</span>
+											<a href="http://ddt.wan.com/news/detail/3_1264.html"
+												title="《弹弹堂3》De 30 de outubro a 2 de novembro, recarga dá presentes de Anjo do Vento"
+												target="_blank">《弹弹堂3》De 30 de outubro a 2 de novembro, recarga dá presentes de Anjo do Vento</a>
+											<em>[10-30]</em>
+										</li>
+										<li>
+											<span>Evento</span>
+											<a href="http://ddt.wan.com/news/detail/3_1244.html"
+												title="《弹弹堂3》Atividades online de outubro, emoção sem fim" target="_blank">《弹弹堂3》Atividades online de outubro, emoção sem fim</a>
+											<em>[09-29]</em>
+										</li>
+										<li class="last">
+											<span>Evento</span>
+											<a href="http://ddt.wan.com/news/detail/3_1246.html"
+												title="《弹弹堂3》De 1 a 2 de outubro, grandes descontos do Dia Nacional, recarga dá pedras de avanço"
+												target="_blank">《弹弹堂3》De 1 a 2 de outubro, grandes descontos do Dia Nacional, recarga dá pedras de avanço</a>
+											<em>[09-29]</em>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+						</div>
+						<div class="activity-box f-r">
+
+							<a target="_blank" title="" class="first" href="http://ddt.wan.com/news/detail/1_1269.html">
+								<img alt="今日活动" src="images/shop.jpg" />
+							</a>
+							<a target="_blank" title="" href="index.html">
+								<img alt="十一月专题活动" src="images/s0.jpg" />
+							</a>
+						</div>
+					</div>
+					<div class="gameData mt10 clearfix">
+						<div class="box-tit data-tit">
+							<a class="box-more f-r" href="ddt-wiki.html" target="_blank">Mais</a>
+							<strong>游戏资料</strong>
+						</div>
+						<div class="data-box clearfix">
+							<div class="data-left f-l">
+								<img src="images/wiki/wiki_ico/wiki_ico_01.jpg" alt="">
+								<img src="images/wiki/wiki_ico/wiki_ico_02.jpg" alt="">
+								<img src="images/wiki/wiki_ico/wiki_ico_03.jpg" alt="">
+								<img src="images/wiki/wiki_ico/wiki_ico_04.jpg" alt="">
+							</div>
+							<div class="data-rgt f-r">
+								<div class="data-menu clearfix">
+									<a class="a" href="javascript:void(0)"
+										style="background-position: 0px -110px;">弹弹新兵</a>
+									<a class="b" href="javascript:void(0)">弹王进阶</a>
+									<a class="c" href="javascript:void(0)">高手速成</a>
+									<a class="d" href="javascript:void(0)">特色系统</a>
+								</div>
+								<div class="game-guide">
+									<strong>Guia do jogo：</strong>As informações mais detalhadas do jogo são para ajudá-lo a avançar rapidamente do novato à elite Dandan.
+								</div>
+								<ul class="data-ul clearfix">
+									<li>
+										<a target="_blank"
+											href="http://ddt.wan.com/gamedata/117.html">Como resolver o problema de carregamento malsucedido do jogo e tela preta</a>
+									</li>
+									<li>
+										<a target="_blank" href="http://ddt.wan.com/gamedata/118.html">função hierárquica</a>
+									</li>
+									<li>
+										<a target="_blank" href="http://ddt.wan.com/gamedata/119.html">Configurações do sistema</a>
+									</li>
+									<li>
+										<a target="_blank" href="http://ddt.wan.com/gamedata/120.html">Atributos de função</a>
+									</li>
+									<li>
+										<a target="_blank" href="http://ddt.wan.com/gamedata/121.html">habilidades básicas</a>
+									</li>
+									<li>
+										<a target="_blank" href="http://ddt.wan.com/gamedata/122.html">Operações básicas</a>
+									</li>
+									<li>
+										<a target="_blank" href="http://ddt.wan.com/gamedata/123.html">Introdução ao jogo</a>
+									</li>
+									<li>
+										<a target="_blank" href="http://ddt.wan.com/gamedata/124.html">interface do jogo</a>
+									</li>
+									<li>
+										<a target="_blank" href="http://ddt.wan.com/gamedata/125.html">Batalha PvE</a>
+									</li>
+									<li>
+										<a target="_blank" href="http://ddt.wan.com/gamedata/126.html">Batalha PVP</a>
+									</li>
+								</ul>
+								<ul class="data-ul clearfix hidden">
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/161.html">卡敏知识</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/162.html">蚂蚁技能</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/163.html">豆芽技能</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/164.html">小鸡技能</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/165.html">波谷技能</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/166.html">高抛打法</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/167.html">半抛打法</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/168.html">65°打法</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/169.html">50°打法</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/170.html">30°打法</a></li>
+								</ul>
+								<ul class="data-ul clearfix hidden">
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/132.html">首饰属性</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/133.html">弹弹堂走位大全</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/134.html">宝箱系统</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/135.html">公会系统</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/136.html">商城道具</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/137.html">美容装饰</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/138.html">装备获得</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/139.html">副武器</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/140.html">武器碎片</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/141.html">货币系统</a></li>
+								</ul>
+								<ul class="data-ul clearfix hidden">
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/160.html">VIP系统</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/159.html">观战系统</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/158.html">结婚系统</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/157.html">魅力系统</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/156.html">签到系统</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/155.html">师徒系统</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/154.html">精炼系统</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/153.html">战魂系统</a></li>
+									<li><a target="_blank" href="http://ddt.wan.com/gamedata/152.html">弹王图腾</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="weapon mt10">
+						<div class="box-tit weapon-tit">
+							<a class="box-more f-r" href="main.html" target="_blank">Mais</a>
+							<strong>animais de estimação com armas</strong>
+						</div>
+						<div class="weapon-box">
+							<div class="weapon-menu p-r clearfix">
+								<span class="select">Armas</span>
+								<span>Pets</span>
+								<span>Montaria</span>
+								<span>Ternos</span>
+								<span>Roupas-F</span>
+								<span>Roupas-M</span>
+
+								<div class="tab-underline p-a"></div>
+							</div>
+							<div class="clearfix">
+								<ul class="weapon-ul clearfix">
+									<li>
+										<a href="http://ddt.wan.com/element/content/113.html" target="_blank">
+											<img src="images/img/weapons/0001.jpg" alt="收割者之镰">
+											<span>收割者之镰</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/111.html" target="_blank">
+											<img src="images/img/weapons/0002.jpg" alt="加农神炮">
+											<span>加农神炮</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/112.html" target="_blank">
+											<img src="images/img/weapons/0003.jpg" alt="放逐之刃">
+											<span>放逐之刃</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/95.html" target="_blank">
+											<img src="images/img/weapons/0004.jpg" alt="玛雅蛇杖">
+											<span>玛雅蛇杖</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/93.html" target="_blank">
+											<img src="images/img/weapons/0005.jpg" alt="极雪之爱">
+											<span>极雪之爱</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/94.html" target="_blank">
+											<img src="images/img/weapons/0006.jpg" alt="伯爵之剑">
+											<span>伯爵之剑</span>
+										</a>
+									</li>
+								</ul>
+								<ul class="weapon-ul clearfix hidden">
+									<li>
+										<a href="http://ddt.wan.com/element/content/132.html" target="_blank">
+											<img src="images/img/pets/0001.jpg" alt="吉比鹿">
+											<span>吉比鹿</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/96.html" target="_blank">
+											<img src="images/img/pets/0002.jpg" alt="远古幼龙">
+											<span>远古幼龙</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/134.html" target="_blank">
+											<img src="images/img/pets/0003.jpg" alt="幼火红蚁">
+											<span>幼火红蚁</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/133.html" target="_blank">
+											<img src="images/img/pets/0004.jpg" alt="闪耀绿芽">
+											<span>闪耀绿芽</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/97.html" target="_blank">
+											<img src="images/img/pets/0005.jpg" alt="冰晶凤凰">
+											<span>冰晶凤凰</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/98.html" target="_blank">
+											<img src="images/img/pets/0006.jpg" alt="上古魔蛇">
+											<span>上古魔蛇</span>
+										</a>
+									</li>
+								</ul>
+								<ul class="weapon-ul clearfix hidden">
+									<li>
+										<a href="http://ddt.wan.com/element/content/116.html" target="_blank">
+											<img src="images/img/sa/0001.jpg" alt="蚂蚁魔毯">
+											<span>蚂蚁魔毯</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/115.html" target="_blank">
+											<img src="images/img/sa/0002.jpg" alt="飞天扫帚">
+											<span>飞天扫帚</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/114.html" target="_blank">
+											<img src="images/img/sa/0003.jpg" alt="小魔狼">
+											<span>小魔狼</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/108.html" target="_blank">
+											<img src="images/img/sa/0004.jpg" alt="小白马">
+											<span>小白马</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/109.html" target="_blank">
+											<img src="images/img/sa/0005.jpg" alt="野猪王">
+											<span>野猪王</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/110.html" target="_blank">
+											<img src="images/img/sa/0006.jpg" alt="魔幻金鱼">
+											<span>魔幻金鱼</span>
+										</a>
+									</li>
+								</ul>
+								<ul class="weapon-ul clearfix hidden">
+									<li>
+										<a href="http://ddt.wan.com/element/content/128.html" target="_blank">
+											<img src="images/img/obraz/0001.jpg" alt="忧郁恶灵">
+											<span>忧郁恶灵</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/127.html" target="_blank">
+											<img src="images/img/obraz/0002.jpg" alt="抓妖小道">
+											<span>抓妖小道</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/126.html" target="_blank">
+											<img src="images/img/obraz/0003.jpg" alt="港台BABY">
+											<span>港台BABY</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/125.html" target="_blank">
+											<img src="images/img/obraz/0004.jpg" alt="小艾">
+											<span>小艾</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/124.html" target="_blank">
+											<img src="images/img/obraz/0005.jpg" alt="小笠">
+											<span>小笠</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/123.html" target="_blank">
+											<img src="images/img/obraz/0006.jpg" alt="流盲果果">
+											<span>流盲果果</span>
+										</a>
+									</li>
+								</ul>
+								<ul class="weapon-ul clearfix hidden">
+									<li>
+										<a href="http://ddt.wan.com/element/content/119.html" target="_blank">
+											<img src="images/img/style/0001.jpg" alt="蠢蠢欲动">
+											<span>蠢蠢欲动</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/122.html" target="_blank">
+											<img src="images/img/style/0002.jpg" alt="花蝶飞舞">
+											<span>花蝶飞舞</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/121.html" target="_blank">
+											<img src="images/img/style/0003.jpg" alt="纯情萝莉">
+											<span>纯情萝莉</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/120.html" target="_blank">
+											<img src="images/img/style/0004.jpg" alt="玫瑰情怀">
+											<span>玫瑰情怀</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/118.html" target="_blank">
+											<img src="images/img/style/0005.jpg" alt="闲庭信步">
+											<span>闲庭信步</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/117.html" target="_blank">
+											<img src="images/img/style/0006.jpg" alt="衣裙纷飞">
+											<span>衣裙纷飞</span>
+										</a>
+									</li>
+								</ul>
+								<ul class="weapon-ul clearfix hidden">
+									<li>
+										<a href="http://ddt.wan.com/element/content/131.html" target="_blank">
+											<img src="images/img/zh/0001.jpg" alt="啵咕荣耀">
+											<span>啵咕荣耀</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/130.html" target="_blank">
+											<img src="images/img/zh/0002.jpg" alt="考拉贝贝">
+											<span>考拉贝贝</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/129.html" target="_blank">
+											<img src="images/img/zh/0003.jpg" alt="魔法圣诞">
+											<span>魔法圣诞</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/107.html" target="_blank">
+											<img src="images/img/zh/0004.jpg" alt="名媛礼帽">
+											<span>名媛礼帽</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/105.html" target="_blank">
+											<img src="images/img/zh/0005.jpg" alt="双飞翼">
+											<span>双飞翼</span>
+										</a>
+									</li>
+									<li>
+										<a href="http://ddt.wan.com/element/content/106.html" target="_blank">
+											<img src="images/img/zh/0006.jpg" alt="顽皮熊">
+											<span>顽皮熊</span>
+										</a>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+					<div class="recreation mt10">
+						<div class="box-tit recreation-tit">
+							<a class="box-more f-r" href="#" target="_blank">Mais</a>
+							<strong>娱乐休闲</strong>
+						</div>
+						<div class="recreation-box">
+							<div class="recreation-menu p-r clearfix">
+								<span class="select">Avatares</span>
+								<span>Papel de parede</span>
+								<span>Capturas de tela</span>
+								<span>Vídeo</span>
+								<span>Mangá</span>
+								<div class="tab-underline2 p-a"></div>
+							</div>
+							<div class="clearfix">
+								<ul class="recreation-ul clearfix">
+									<li>
+										<a href="images/ava/player/img/img_01.jpg" rel="clearbox[gallery=Аватарки]">
+											<img alt="红颜ر    ๓" src="images/ava/player/ico/ico_01.jpg" />
+										</a>
+									</li>
+									<li>
+										<a href="images/ava/player/img/img_02.jpg" rel="clearbox[gallery=Аватарки]">
+											<img alt="红颜ر    ๓" src="images/ava/player/ico/ico_02.jpg" />
+										</a>
+									</li>
+									<li>
+										<a href="images/ava/player/img/img_03.jpg" rel="clearbox[gallery=Аватарки]">
+											<img alt="红颜ر    ๓" src="images/ava/player/ico/ico_03.jpg" />
+										</a>
+									</li>
+									<li>
+										<a href="images/ava/player/img/img_04.jpg" rel="clearbox[gallery=Аватарки]">
+											<img alt="纸み鸢" src="images/ava/player/ico/ico_04.jpg" />
+										</a>
+									</li>
+								</ul>
+								<ul class="recreation-ul clearfix hidden">
+									<li>
+										<a href="images/wallpaper/0001.jpg" rel="clearbox[gallery=Обои]"><img
+												src="images/wallpaper/0001.jpg" alt="神曲图片" /></a>
+
+									</li>
+									<li>
+										<a href="images/wallpaper/0002.jpg" rel="clearbox[gallery=Обои]"><img
+												src="images/wallpaper/0002.jpg" alt="神曲图片" /></a>
+
+									</li>
+									<li>
+										<a href="images/wallpaper/0003.jpg" rel="clearbox[gallery=Обои]"><img
+												src="images/wallpaper/0003.jpg" alt="神曲图片" /></a>
+
+									</li>
+									<li>
+
+										<a href="images/wallpaper/0004.jpg" rel="clearbox[gallery=Обои]"><img
+												src="images/wallpaper/0004.jpg" alt="神曲图片" /></a>
+									</li>
+								</ul>
+								<ul class="recreation-ul clearfix hidden">
+									<li>
+
+										<a href="images/screens/0001.jpg" rel="clearbox[gallery=Скриншоты]"><img
+												src="images/screens/0001.jpg" alt="弹2图片" /></a>
+									</li>
+									<li>
+
+										<a href="images/screens/0002.jpg" rel="clearbox[gallery=Скриншоты]"><img
+												src="images/screens/0002.jpg" alt="弹2图片" /></a>
+									</li>
+									<li>
+
+										<a href="images/screens/0003.jpg" rel="clearbox[gallery=Скриншоты]"><img
+												src="images/screens/0003.jpg" alt="弹2图片" /></a>
+									</li>
+									<li>
+
+										<a href="images/screens/0004.jpg" rel="clearbox[gallery=Скриншоты]"><img
+												src="images/screens/0004.jpg" alt="弹2图片" /></a>
+									</li>
+								</ul>
+								<ul class="recreation-ul clearfix hidden">
+									<li>
+										<a href="video/play-video-01.html"
+											rel="clearbox[gallery=Видео,,width=600,,height=400]"><img alt="弹3宣传视频"
+												src="images/video/0001.jpg" /></a>
+									</li>
+									<li>
+										<a href="video/play-video-02.html"
+											rel="clearbox[gallery=Видео,,width=600,,height=400]"><img alt="弹弹堂五周年庆"
+												src="images/video/0002.jpg" /></a>
+									</li>
+									<li>
+										<a href="video/play-video-03.html"
+											rel="clearbox[gallery=Видео,,width=600,,height=400]"><img
+												alt="战宠助阵挑战新副本 《弹弹堂2》解说视频" src="images/video/0003.jpg" /></a>
+									</li>
+									<li>
+										<a href="video/play-video-04.html"
+											rel="clearbox[gallery=Видео,,width=600,,height=400]"><img alt="大笑蛋疼MV"
+												src="images/video/0004.jpg" /></a>
+									</li>
+								</ul>
+								<ul class="recreation-ul clearfix hidden">
+									<li>
+
+										<a href="images/final/0001.jpg" rel="clearbox[gallery=Манга]"><img
+												src="images/final/0001.jpg" alt="卡牌之一" /></a>
+									</li>
+									<li>
+
+										<a href="images/final/0002.jpg" rel="clearbox[gallery=Манга]"><img
+												src="images/final/0002.jpg" alt="漫画" /></a>
+									</li>
+									<li>
+
+										<a href="images/final/0003.jpg" rel="clearbox[gallery=Манга]"><img
+												src="images/final/0003.jpg" alt="斗牛士" /></a>
+									</li>
+									<li>
+
+										<a href="images/final/0004.jpg" rel="clearbox[gallery=Манга]"><img
+												src="images/final/0004.jpg" alt="卡牌之二" /></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="DynamicContent">
+		<div id="loading">Conectando ao servidor!<img alt="" src="images/loading.gif" /></div>
+	</div>
+	<div id="ErrorContent">
+		<div id="content"></div>
+	</div>
+	<div id="codeContent">
+		<table style="width:100%;">
+			<tr>
+				<td class="auto-style1">
+					<img id="ImageCode" src="auth/validatecode.ashx" height="32" width="127" alt="" />
+				</td>
+				<td style="text-align: center">
+					<input type="text" style="font-size: 14px;width: 120px" name="code"
+						placeholder="Введите код безопасности" id="code" />
+				</td>
+				<td>
+					<a id="ReLoad" title="" href="javascript:href()" style="font-size: 12px; color: blue">Atualizar</a>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" style="text-align: center;">
+					<a class="small green button" type="" id="checkCode"
+						onclick="return checkCode();">Registro!</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="TB_overlayBG"></div>
+	<div class="footer-img"></div>
+	<link rel="stylesheet" href="js/footer/css/footer.css" />
+	<script src="js/footer/js/footer.js"></script>
+	<script src="js/ddt2/ddt-index.js"></script>
+	<script src="js/ddt2/ddt2-index.js"></script>
+	<script src='js/clearbox/js/clearbox.js'></script>
+	<div id="Div1">
+</body>
+
+</html>

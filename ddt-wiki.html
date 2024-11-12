@@ -1,0 +1,376 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>DDtank2 wiki</title>
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="bookmark" href="images/favicon.ico" />
+		<link rel="stylesheet" href="css/ddt-reset.css">
+		<link rel="stylesheet" href="css/ddt-style.css">
+		<link rel="stylesheet" href="css/ddt-data.css">
+		<link rel="stylesheet" type="text/css" media="screen"
+			href="js/clearbox/css/cb_style.css">
+		<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="js/webtoolkit.md5.js"></script>
+		<script type="text/javascript" src="js/jquery.corner.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.button.js"></script>
+	</head>
+	<body>
+		<script src="js/promo-top-bar.js"></script>
+		<div class="wrap-box data-bg">
+			<div class="w980 clearfix">
+				<div class="hearder p-r">
+					<div class="slogan p-a">
+						<a href="index.html" target="_blank">
+							<img class="ie6png" src="images/logo/new-ddt.png" alt title>
+						</a>
+					</div>
+				</div> <div class="blank"></div>
+				<div class="index-left f-l">
+					<div class="login p-r clearfix">
+						<div class="unlogin-box clearfix">
+							<div class="input-box f-l p-r">
+								<input type="text" name id="user">
+								<input type="password" name id="userPass">
+								<div class="blank"></div>
+								<label for="user" class="user-lab">Логин</label>
+								<label for="userPass" class="pass-lab">Пароль</label>
+							</div>
+							<span class="loginbtn f-l" onclick="return checklogin();"></span>
+							<div class="forget f-l">
+								<a href="#user-reg">Создать аккаунт?</a> | <a href="#forgot-pass">Забыли
+									пароль?</a>
+							</div>
+						</div>
+						<!--#1 -->
+						<a href="#x" class="overlay" id="user-reg"></a>
+						<div class="popup"><a class="close" href="#close"></a>
+							<center>
+								<h2>Создать аккаунт!</h2>
+								<p>Приятной игры :)</p>
+							</center>
+							<p>
+								<label for="usernamesignup" class="uname">Логин</label>
+								<input id="usernamesignup" name="usernamesignup" type="text"
+									placeholder="Ведите логин" />
+							</p>
+							<p>
+								<label for="emailsignup" class="youmail"> Маил</label>
+								<input id="emailsignup" name="emailsignup" type="text"
+									placeholder="Ведите почту" />
+							</p>
+							<p>
+								<label for="passwordsignup" class="youpasswd">Пароль</label>
+								<input id="passwordsignup" name="passwordsignup" type="password"
+									placeholder="Ведите пароль" />
+							</p>
+							<p>
+								<label for="passwordsignup_confirm" class="youpasswd">Повторите
+									пароль</label>
+								<input id="passwordsignup_confirm" name="passwordsignup_confirm"
+									type="password" placeholder="Повторите пароль!" />
+							</p>
+							<center>
+								<a class="large orangellow button"
+									onclick="return checkForm();">Готово</a>
+							</center>
+						</div>
+						<!--#2 -->
+						<a href="#x" class="overlay" id="forgot-pass"></a>
+						<div class="popup"><a class="close" href="#close"></a>
+							<center>
+								<h2>Восстановить пароль!</h2>
+								<p>Временно не работает</p>
+							</center>
+							<p>
+								<label for class>Ник</label>
+								<input id name type="text" placeholder="Ведите логин" />
+							</p>
+							<p>
+								<label for class>Логин</label>
+								<input id name type="text" placeholder="Ведите логин" />
+							</p>
+							<p>
+								<label for class>Майл</label>
+								<input id name type="text" placeholder="Ведите майл" />
+							</p>
+							<center>
+								<a class="large orangellow button">Восстановить</a>
+							</center>
+						</div>
+						<!--#3 -->
+						<div class="login-box hidden">
+							<div class="clearfix">
+								<a href="http://play.wan.com/user/index" class="userImg f-l"
+									target="_blank"></a>
+								<div class="f-l">
+									<div class="userVal ellipsis"></div>
+									<div class="currencyNum"></div>
+								</div>
+								<a href="#nogo" class="loginOut f-l">[退出]</a>
+							</div>
+							<h2>O servidor em que você fez login pela última vez foi: </h2>
+							<a href class="lastLogin">Carregando...</a>
+						</div>
+					</div>
+					<div class="down-btn mt20 ">
+						<a href="http://219.129.216.161/updates/wan/wanDDT.exe" target="_blank"
+							class="down-btn">登陆器下载</a>
+						<a href="http://ddt.wan.com/newcard.shtml" target="_blank"
+							class="gift-btn">新手礼包</a>
+						<a href="http://play.wan.com/pay/index?game=ddt" target="_blank"
+							class="pay-btn">快速充值</a>
+					</div>
+					<div class="recom-ser mt10 clearfix">
+						<h2 class="h2-tit">Servidor recomendado</h2>
+						<div class="recom-box">
+							<div class="fast-selectSer p-r clearfix">
+								<input type="text" class="fast-input f-l" placeholder="Seleção rápida de servidor">
+								<span class="fast-enter f-l">Entre no jogo</span>
+								<em class="blank"></em>
+								<em class="selectBg p-a"></em>
+							</div>
+							<ul class="clearfix">
+								<li>Carregando...</li>
+							</ul>
+							<a href="server.html" class="more-server"
+								target="_blank">Ver mais servidores >></a>
+						</div>
+					</div>
+					<div class="ddt-link mt10 clearfix">
+						<a class="pt10" href="javascript:void(0)">0755-61886777</a>
+						<a class="tel"
+							href="http://crm2.qq.com/page/portalpage/wpa.php?uin=800073277&f=1&ty=1&aty=0&a=&from=6">24小时在线客服</a>
+						<a class="tel" href="mailto:kefu@7road.com">kefu@7road.com</a>
+						<div class="link-down p-r">
+							<span>弹弹堂合作媒体列表</span>
+							<ul class="p-a clearfix">
+
+								<li><a href="http://www.wan.com/" target="_blank">畅游wan平台</a></li>
+								<li><a href="http://jy.wan.com" target="_blank">剑影</a></li>
+								<li><a href="http://xddt.wan.com" target="_blank">新弹弹堂</a></li>
+								<li><a href="http://sq.wan.com" target="_blank">神曲</a></li>
+							</ul>
+						</div>
+					</div> 
+				</div>
+				<div class="index-rgt f-r">
+					<div class="pageTit f-l">
+						<h2 class="pageH2 f-l data-h2">游戏资料</h2>
+						<div class="bread f-r">
+							您的位置：<a href="index.html">首页</a> > 游戏资料
+						</div>
+					</div>
+					<div class="blank"></div>
+					<div class="pageBox">
+						<div class="page-banner">
+							<a href="http://ddt.wan.com/news/detail/1_1263.html" title>
+								<img alt="" src="images/1414641850502.jpg" /></a>
+						</div>
+						<div class="share-bar clearfix">
+							<div class="search-bd f-r clearfix">
+								444
+							</div>
+							<!-- Baidu Button BEGIN -->
+							<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+								<span class="bds_more">Compartilhar para：</span>
+								<a class="bds_tsina" title="Compartilhar no Sina Weibo" href="#"></a>
+								<a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+								<a class="bds_tqq" title="分享到腾讯微博" href="#"></a>
+								<a class="bds_renren" title="分享到人人网" href="#"></a>
+								<a class="bds_t163" title="分享到网易微博" href="#"></a>
+								<a class="bds_kaixin001" title="分享到开心网" href="#"></a>
+								<a class="bds_douban" title="分享到豆瓣网" href="#"></a>
+								<a class="bds_diandian" title="分享到点点网" href="#"></a>
+								<a class="shareCount" href="#" title="累计分享1次">1</a>
+							</div>
+							<!-- Baidu Button END -->
+						</div>
+						<div class="gameData-lists clearfix">
+							<div class="gameData-list gameData-list-basic mt20">
+								<a name="d1"></a>
+								<h3 class="bold">Recrutamento</h3>
+								<div class="border-box green-box">
+									<i></i>
+									<div class=" border-box-inner">
+										<h4 class="bold">Introdução ao jogo</h4>
+										<p class="fn-clear">
+
+											<a title="Como resolver problemas de carregamento do jogo e tela preta" class="greenBgLink" href="ddt-wiki-01.html">Problemas de carregamento do jogo e tela preta?</a>
+											<b>|</b>
+											<a title="Função de Nível" class="greenBgLink" href="ddt-wiki-02.html">Função de Nível</a>
+											<b>|</b>
+											<a title="Configurações do Sistema" class="greenBgLink" href="119.html">Configurações do Sistema</a>
+											<b>|</b>
+											<a title="Atributos do Personagem" class="greenBgLink" href="120.html">Atributos do Personagem</a>
+											<b>|</b>
+											<a title="Habilidades Básicas" class="greenBgLink" href="121.html">Habilidades Básicas</a>
+											<b>|</b>
+											<a title="Operações Básicas" class="greenBgLink" href="122.html">Operações Básicas</a>
+											<b>|</b>
+											<a title="Introdução ao Jogo" class="greenBgLink" href="123.html">Introdução ao Jogo</a>
+											<b>|</b>
+											<a title="Interface do Jogo" class="greenBgLink" href="124.html">Interface do Jogo</a>
+											<b>|</b>
+											<a title="Estado de Fantasma" class="greenBgLink" href="127.html">Estado de Fantasma</a>
+											<b>|</b>
+											<a title="Habilidades de Combate" class="greenBgLink" href="128.html">Habilidades de Combate</a>
+											<b>|</b>
+											<a title="Interface de Combate" class="greenBgLink" href="129.html">Interface de Combate</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="gameData-list gameData-list-advanced mt20">
+								<a name="d2"></a>
+								<h3 class="bold">Avançado no Jogo</h3>
+								<div class="border-box purple-box">
+									<i></i>
+									<div class="fn-clear border-box-inner">
+										<h4 class="bold">Avançado do Rei do Tiro</h4>
+										<p class="fn-clear">
+											<a title="Conhecimento de Kart" class="purpleBgLink" href="161.html">Conhecimento de Kart</a>
+											<b>|</b>
+											<a title="Habilidade de Formiga" class="purpleBgLink" href="162.html">Habilidade de Formiga</a>
+											<b>|</b>
+											<a title="Habilidade de Broto" class="purpleBgLink" href="163.html">Habilidade de Broto</a>
+											<b>|</b>
+											<a title="Habilidade de Pintinho" class="purpleBgLink" href="164.html">Habilidade de Pintinho</a>
+											<b>|</b>
+											<a title="Habilidade de Vale" class="purpleBgLink" href="165.html">Habilidade de Vale</a>
+											<b>|</b>
+											<a title="Técnica de Arremesso Alto" class="purpleBgLink" href="166.html">Técnica de Arremesso Alto</a>
+											<b>|</b>
+											<a title="Técnica de Arremesso Médio" class="purpleBgLink" href="167.html">Técnica de Arremesso Médio</a>
+											<b>|</b>
+											<a title="Sistema de Fabricação" class="purpleBgLink" href="171.html">Sistema de Fabricação</a>
+											<b>|</b>
+											<a title="Sistema de Cultivo" class="purpleBgLink" href="172.html">Sistema de Cultivo</a>
+											<b>|</b>
+											<a title="Sistema de Mascotes" class="purpleBgLink" href="173.html">Sistema de Mascotes</a>
+											<b>|</b>
+											<a title="Sistema de Liga" class="purpleBgLink" href="174.html">Sistema de Liga</a>
+											<b>|</b>
+											<a title="Competição de Elite" class="purpleBgLink" href="176.html">Competição de Elite</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							
+							<div class="gameData-list gameData-list-master mt20">
+								<a name="d3"></a>
+								<h3 class="bold">Técnicas Rápidas para Especialistas</h3>
+								<div class="border-box brown-box">
+									<i></i>
+									<div class="fn-clear border-box-inner">
+										<h4 class="bold">Técnicas Rápidas para Especialistas</h4>
+										<p class="fn-clear">
+											<a title="Atributos de Joias" class="brownBgLink" href="132.html">Atributos de Joias</a>
+											<b>|</b>
+											<a title="Guia de Movimentação" class="brownBgLink" href="133.html">Guia de Movimentação</a>
+											<b>|</b>
+											<a title="Sistema de Baús" class="brownBgLink" href="134.html">Sistema de Baús</a>
+											<b>|</b>
+											<a title="Sistema de Guildas" class="brownBgLink" href="135.html">Sistema de Guildas</a>
+											<b>|</b>
+											<a title="Itens da Loja" class="brownBgLink" href="136.html">Itens da Loja</a>
+											<b>|</b>
+											<a title="Decoração" class="brownBgLink" href="137.html">Decoração</a>
+											<b>|</b>
+											<a title="Obtendo Equipamentos" class="brownBgLink" href="138.html">Obtendo Equipamentos</a>
+											<b>|</b>
+											<a title="Armas Secundárias" class="brownBgLink" href="139.html">Armas Secundárias</a>
+											<b>|</b>
+											<a title="Fragmentos de Arma" class="brownBgLink" href="140.html">Fragmentos de Arma</a>
+											<b>|</b>
+											<a title="Sistema de Moedas" class="brownBgLink" href="141.html">Sistema de Moedas</a>
+											<b>|</b>
+											<a title="Sistema de Trocas" class="brownBgLink" href="142.html">Sistema de Trocas</a>
+											<b>|</b>
+											<a title="Sistema de Rankings" class="brownBgLink" href="143.html">Sistema de Rankings</a>
+											<b>|</b>
+											<a title="Sistema de Fundição" class="brownBgLink" href="147.html">Sistema de Fundição</a>
+											<b>|</b>
+											<a title="Sistema de Aprimoramento" class="brownBgLink" href="148.html">Sistema de Aprimoramento</a>
+											<b>|</b>
+											<a title="Sistema de Missões" class="brownBgLink" href="150.html">Sistema de Missões</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							
+							<div class="gameData-list gameData-list-special mt20">
+								<a name="d4"></a>
+								<h3 class="bold">Sistemas Especiais</h3>
+								<div class="border-box blue-box">
+									<i></i>
+									<div class="fn-clear border-box-inner">
+										<h4 class="bold">Avanço para Especialistas</h4>
+										<p class="fn-clear">
+											<a title="Sistema VIP" class="blueBgLink" href="160.html">Sistema VIP</a>
+											<b>|</b>
+											<a title="Sistema de Espectadores" class="blueBgLink" href="159.html">Sistema de Espectadores</a>
+											<b>|</b>
+											<a title="Sistema de Casamento" class="blueBgLink" href="158.html">Sistema de Casamento</a>
+											<b>|</b>
+											<a title="Sistema de Charme" class="blueBgLink" href="157.html">Sistema de Charme</a>
+											<b>|</b>
+											<a title="Sistema de Registro" class="blueBgLink" href="156.html">Sistema de Registro</a>
+											<b>|</b>
+											<a title="Sistema de Mentor" class="blueBgLink" href="155.html">Sistema de Mentor</a>
+											<b>|</b>
+											<a title="Sistema de Refinamento" class="blueBgLink" href="154.html">Sistema de Refinamento</a>
+											<b>|</b>
+											<a title="Sistema de Espíritos de Batalha" class="blueBgLink" href="153.html">Sistema de Espíritos de Batalha</a>
+											<b>|</b>
+											<a title="Totem do Rei do Tiro" class="blueBgLink" href="152.html">Totem do Rei do Tiro</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>							
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="DynamicContent">
+			<div id="loading">Идет подключение к серверу!<img alt
+					src="images/loading.gif" /></div>
+		</div>
+		<div id="ErrorContent">
+			<div id="content"></div>
+		</div>
+		<div id="codeContent">
+			<table style="width:100%;">
+				<tr>
+					<td class="auto-style1">
+						<img id="ImageCode" src="auth/validatecode.ashx" height="32" width="127"
+							alt />
+					</td>
+					<td style="text-align: center">
+						<input type="text" style="font-size: 14px;width: 120px" name="code"
+							placeholder="Введите код безопасности" id="code" />
+					</td>
+					<td>
+						<a id="ReLoad" title href="javascript:href()"
+							style="font-size: 12px; color: blue">Обновить</a>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="text-align: center;">
+						<a class="small green button" type id="checkCode"
+							onclick="return checkCode();">Зарегистрироваться!</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="TB_overlayBG"></div>
+		<div class="footer-img"></div>
+		<link rel="stylesheet" href="js/footer/css/footer.css" />
+		<script src="js/footer/js/footer.js"></script>
+		<script src="js/ddt2/ddt-index.js"></script>
+		<script src="js/ddt2/ddt2-index.js"></script>
+		<div id="Div1">
+		</body>
+	</html>
